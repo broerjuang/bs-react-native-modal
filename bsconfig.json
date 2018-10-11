@@ -1,0 +1,10 @@
+{
+  "name": "bs-react-native-modal",
+  "version": "0.1.0",
+  "sources": ["src"],
+  "bs-dependencies": ["reason-react", "bs-react-native"],
+  "reason": {
+    "react-jsx": 2
+  },
+  "refmt": 3
+}
