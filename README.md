@@ -45,7 +45,7 @@ module ModalTester = {
 Use yarn or npm
 
 ```shell
-$ yarn add bs-react-native-paper react-native-paper rebolt
+$ yarn add bs-react-native-modal
 ```
 
 Then update your bsconfig.json
