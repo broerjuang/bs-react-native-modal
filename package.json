@@ -12,7 +12,11 @@
     "react-native",
     "modal"
   ],
-  "author": "Juang Wiantoro",
+  "author": "Juang Wiantoro <juangwiantoro@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/broerjuang/bs-react-native-modal.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "^4.0.5"

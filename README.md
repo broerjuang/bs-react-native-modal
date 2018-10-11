@@ -1,8 +1,44 @@
 # bs-react-native-modal
 
-Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
+this is a binding of [react-native-modal](https://github.com/react-native-community/react-native-modal)
 
 ## Usage
+
+see the [rei](https://github.com/broerjuang/bs-react-native-modal/blob/master/src/ReactNativeModal.rei) for detail documentation
+
+```ocaml
+module ModalTester = {
+  open BsReactNative;
+  type state = {isModalVisible: bool};
+  type action =
+    | ToggleModal;
+
+  let component = ReasonReact.reducerComponent("ModalTester");
+  let make = _children => {
+    ...component,
+    initialState: () => {isModalVisible: false},
+    reducer: (action, state) =>
+      switch (action) {
+      | ToggleModal =>
+        ReasonReact.Update({isModalVisible: !state.isModalVisible})
+      },
+    render: self =>
+      <View>
+        <TouchableOpacity onPress={() => self.send(ToggleModal)}>
+          <Text value="Show Modal" />
+        </TouchableOpacity>
+        <ReactNativeModal isVisible={self.state.isModalVisible}>
+          <View>
+            <Text value="Hello!" />
+            <TouchableOpacity onPress={() => self.send(ToggleModal)}>
+              <Text value="Hide Me" />
+            </TouchableOpacity>
+          </View>
+        </ReactNativeModal>
+      </View>,
+  };
+};
+```
 
 ## Installation
 
