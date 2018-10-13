@@ -1,6 +1,6 @@
 {
   "name": "bs-react-native-modal",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "bucklesript bindings for react-native-modal",
   "scripts": {
     "build": "bsb -make-world",

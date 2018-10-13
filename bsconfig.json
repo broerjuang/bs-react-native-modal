@@ -1,6 +1,6 @@
 {
   "name": "bs-react-native-modal",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "sources": ["src"],
   "bs-dependencies": ["reason-react", "bs-react-native"],
   "reason": {
